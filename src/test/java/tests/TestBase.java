@@ -12,5 +12,6 @@ public class TestBase {
     static void beforeAll() {
         Configuration.baseUrl = BASE_URL;
         Configuration.pageLoadStrategy = "eager";
+        Configuration.browserSize = "1920x1080";
     }
 }
