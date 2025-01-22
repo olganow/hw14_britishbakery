@@ -20,9 +20,9 @@ https://british-bakery.ru/catalog/keksy/
 
 ### Технологии
 
-![This is an image](/readme_resourses/java_logo.png)![This is an image](/readme_resourses/gradle_logo.png)!
-[This is an image](/readme_resourses/selenide_logo.png)![This is an image](/readme_resourses/junit_logo.png)!
-[This is an image](/readme_resourses/allure_logo.png)![This is an image](/readme_resourses/tg_logo.png)
+![This is an image](/readme_resourses/java_logo.png)![This is an image](/readme_resourses/gradle_logo.png)
+![This is an image](/readme_resourses/selenide_logo.png)![This is an image](/readme_resourses/junit_logo.png)
+![This is an image](/readme_resourses/allure_logo.png)![This is an image](/readme_resourses/tg_logo.png)
 
 ### Запуск
 
@@ -36,10 +36,10 @@ gradle clean simple_test
 
 - [x] Allure отчет
   - Пример отчета:
-    <img src="/readme_resourses/allure_report.png" width="470" height="272">
+<img src="/readme_resourses/allure_report.png" width="960" height="445">
   
   - Пример видео о запуске:
-    ![test_video.mp4](/readme_resourses/test_video.mp4))
+![test_video.mov](/readme_resourses/test_video.mov))
 
 - [x] Отчет о запуске в Telegram
   - Пример отчета:

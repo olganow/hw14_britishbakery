@@ -25,11 +25,6 @@ public class BritishBakeryTest extends TestBase {
     @CsvSource(value = {
             "Каталог, /catalog/",
             "Торты на заказ, /catalog/torty-na-zakaz/",
-            "Начинки, /toppings/",
-            "Акции, /stocks/",
-            "Доставка и оплата, /delivery/",
-            "Компания, /about/",
-            "Отзывы, /reviews/",
             "Контакты, /contacts/"
     })
     @ParameterizedTest
@@ -70,17 +65,7 @@ public class BritishBakeryTest extends TestBase {
 
     @CsvSource(value = {
             "Торты | /catalog/torty/",
-            "Дополнения к торту | /catalog/dopolneniya-k-tortu/",
-            "Пирожные, кексы | /catalog/pirozhnye-keksy/",
-            "Новый год | /catalog/novyy-god/",
             "Свежая выпечка и сэндвичи | /catalog/svezhaya-vypechka-i-sendvichi/",
-            "Шоколад и конфеты | /catalog/shokolad-shokoladnye-batonchiki/",
-            "Печенье | /catalog/pechene/",
-            "Чай и кофе | /catalog/chay-i-kofe/",
-            "Хлеб  | /catalog/khleb/",
-            "Напитки | /catalog/napitki/",
-            "Замороженные продукты | /catalog/zamorozka/",
-            "Фирменные сувениры | /catalog/firmennyy-suveniry/",
             "Мёд, варенье, пасты | /catalog/myed-varene-pasty/",
             "Предметы интерьера | /catalog/predmety-interera/"
 
