@@ -14,7 +14,7 @@ https://british-bakery.ru/catalog/keksy/
   - initialBasketStateTest - проверка начального отображения кнопки корзины
   - validateProductCartTest - проверка компонентов  карточки товара
   - addProductToBasketAndCleanBasketTest - добавление и удаление продуктов в корзину
-- [x] параметризированные:
+- [x] параметризованные:
   - mainMenuButtonsTest - тестирование кнопок меню на главной странице
   - catalogSubMenuButtonsTest - тестирование кнопок подменю на странице каталога
 
@@ -40,7 +40,7 @@ gradle clean simple_test
 
 - [x] Отчет о запуске в Telegram
   - Пример отчета:
-
+  <img src="/readme_resourses/tg_report.png" width="850" height="842">
 
 
 
