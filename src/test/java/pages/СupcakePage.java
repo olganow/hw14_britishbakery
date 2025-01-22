@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 
 import static com.codeborne.selenide.Condition.*;
@@ -29,26 +30,19 @@ public class СupcakePage {
             "                                                Добавить в корзину                                             ";
     private String expectedSrc = "https://british-bakery.ru/upload/resize_cache/iblock/249/400_400_1/2492002434bd161f64a24f7f47bc709c.jpg";
 
+    @Step("Open Сupcakes Page")
     public СupcakePage openPage() {
         open(BASE_URL + CATALOG + KEKSY);
         return this;
     }
 
-
+    @Step("Validate a Сupcakes Title")
     public СupcakePage validateTitle() {
         header.shouldHave(text(TITLE_HEADER));
         return this;
-
     }
 
-
-    public СupcakePage validateCatalogPage(String buttonName, String link) {
-        SelenideElement button = $$("ul[class='page-category-list'] a").findBy(text(buttonName));
-        button.shouldHave(text(buttonName));
-        button.shouldHave(attribute("href", BASE_URL + link));
-        return this;
-    }
-
+    @Step("Validate a Product Card")
     public СupcakePage validateProductCard() {
         header.shouldHave(text(TITLE_HEADER));
         productName.scrollIntoView(true).shouldHave(text(PRODUCT_NAME));
@@ -60,16 +54,17 @@ public class СupcakePage {
         return this;
     }
 
+    @Step("Click Add Product To Basket")
     public СupcakePage clickAddProductToBasket() {
         addToBasketButton.scrollIntoView(true).shouldBe(visible).shouldHave(text(PRODUCT_ADD_BASKET)).click();
         return this;
     }
 
+    @Step("Click Basket Button")
     public СupcakePage clickBasketButton() {
         basketButton.shouldBe(visible).click();
         return this;
     }
-
 
 }
 

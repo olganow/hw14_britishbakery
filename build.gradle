@@ -3,7 +3,10 @@ plugins {
     id 'io.qameta.allure' version '2.11.2'
 }
 
+group = 'ru.ya.olganow'
 version = '1.0-SNAPSHOT'
+
+
 
 allure {
     report {

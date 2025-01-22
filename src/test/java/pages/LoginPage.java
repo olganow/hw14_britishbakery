@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -23,11 +24,13 @@ public class LoginPage {
 
     private String phone = "123456789";
 
+    @Step("Validate a Title")
     public LoginPage validateTitle() {
         header.shouldHave(text(TITLE_HEADER));
         return this;
     }
 
+    @Step("Validate Page Components")
     public LoginPage validatePageComponents() {
         phoneInput.shouldBe(visible);
         sendButton.shouldHave(text(SEND_BUTTON));
@@ -37,21 +40,22 @@ public class LoginPage {
         return this;
     }
 
+    @Step("Set a Phone")
     public LoginPage setPhone() {
         phoneInput.setValue(phone);
         return this;
     }
 
+    @Step("Clear the Phone Field")
     public LoginPage clearPhone() {
         phoneInput.clear();
         return this;
     }
 
-
+    @Step("Close the Form")
     public LoginPage closeForm() {
         closeButton.click();
         return this;
     }
-
 
 }

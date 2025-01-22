@@ -1,7 +1,12 @@
 package tests;
 
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Link;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -26,6 +31,11 @@ public class BritishBakeryTest extends TestBase {
             "Контакты, /contacts/"
     })
     @ParameterizedTest
+    @Feature("British Bakery")
+    @Story("Main Page")
+    @Owner("Olganow")
+    @Link(value = "Testing", url = "https://github.com/olganow")
+    @Tag("actual")
     @DisplayName("Menu buttons for [test_data][0]")
     void mainMenuButtonsTest(String buttonName, String link) {
         mainPage.openPage();
@@ -34,6 +44,11 @@ public class BritishBakeryTest extends TestBase {
     }
 
     @Test
+    @Feature("British Bakery")
+    @Story("Main page")
+    @Owner("Olganow")
+    @Link(value = "Testing", url = "https://github.com/olganow")
+    @Tag("actual")
     @DisplayName("Validate Authorisation Form")
     void validateAuthorisationFormTest() {
         mainPage.openPage();
@@ -43,6 +58,11 @@ public class BritishBakeryTest extends TestBase {
     }
 
     @Test
+    @Feature("British Bakery")
+    @Story("Login")
+    @Owner("Olganow")
+    @Link(value = "Testing", url = "https://github.com/olganow")
+    @Tag("actual")
     @DisplayName("Cancel Authorisation")
     void cancelAuthorisationTest() {
         mainPage.openPage();
@@ -73,6 +93,11 @@ public class BritishBakeryTest extends TestBase {
 
     }, delimiter = '|')
     @ParameterizedTest
+    @Feature("British Bakery")
+    @Story("Catalog tests")
+    @Owner("Olganow")
+    @Link(value = "Testing", url = "https://github.com/olganow")
+    @Tag("actual")
     @DisplayName("Catalog Sub Menu Buttons  for [test_data][0]")
     void catalogSubMenuButtonsTest(String buttonName, String link) {
         catalogPage.openPage();
@@ -81,6 +106,11 @@ public class BritishBakeryTest extends TestBase {
     }
 
     @Test
+    @Feature("British Bakery")
+    @Story("Catalog tests")
+    @Owner("Olganow")
+    @Link(value = "Testing", url = "https://github.com/olganow")
+    @Tag("actual")
     @DisplayName("Initial Basket State")
     void initialBasketStatet() {
         catalogPage.openPage();
@@ -89,6 +119,11 @@ public class BritishBakeryTest extends TestBase {
     }
 
     @Test
+    @Feature("British Bakery")
+    @Story("Capcakes page tests")
+    @Owner("Olganow")
+    @Link(value = "Testing", url = "https://github.com/olganow")
+    @Tag("actual")
     @DisplayName("Validate product Card")
     void validateProductCart() {
         сupcakePage.openPage();
@@ -97,6 +132,11 @@ public class BritishBakeryTest extends TestBase {
     }
 
     @Test
+    @Feature("British Bakery")
+    @Story("Basket tests")
+    @Owner("Olganow")
+    @Link(value = "Testing", url = "https://github.com/olganow")
+    @Tag("actual")
     @DisplayName("Add product Card and clean basket")
     void addProductToBasketAndCleanBasket() {
         сupcakePage.openPage();
