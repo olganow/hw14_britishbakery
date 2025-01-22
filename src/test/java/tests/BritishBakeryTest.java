@@ -12,7 +12,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import pages.*;
 
-
+@Feature("British Bakery")
+@Owner("Olganow")
+@Link(value = "Testing", url = "https://github.com/olganow")
 public class BritishBakeryTest extends TestBase {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
@@ -31,10 +33,7 @@ public class BritishBakeryTest extends TestBase {
             "Контакты, /contacts/"
     })
     @ParameterizedTest
-    @Feature("British Bakery")
     @Story("Main Page")
-    @Owner("Olganow")
-    @Link(value = "Testing", url = "https://github.com/olganow")
     @Tag("actual")
     @DisplayName("Menu buttons for [test_data][0]")
     void mainMenuButtonsTest(String buttonName, String link) {
@@ -44,10 +43,7 @@ public class BritishBakeryTest extends TestBase {
     }
 
     @Test
-    @Feature("British Bakery")
     @Story("Main page")
-    @Owner("Olganow")
-    @Link(value = "Testing", url = "https://github.com/olganow")
     @Tag("actual")
     @DisplayName("Validate Authorisation Form")
     void validateAuthorisationFormTest() {
@@ -58,10 +54,7 @@ public class BritishBakeryTest extends TestBase {
     }
 
     @Test
-    @Feature("British Bakery")
     @Story("Login")
-    @Owner("Olganow")
-    @Link(value = "Testing", url = "https://github.com/olganow")
     @Tag("actual")
     @DisplayName("Cancel Authorisation")
     void cancelAuthorisationTest() {
@@ -93,10 +86,7 @@ public class BritishBakeryTest extends TestBase {
 
     }, delimiter = '|')
     @ParameterizedTest
-    @Feature("British Bakery")
     @Story("Catalog tests")
-    @Owner("Olganow")
-    @Link(value = "Testing", url = "https://github.com/olganow")
     @Tag("actual")
     @DisplayName("Catalog Sub Menu Buttons  for [test_data][0]")
     void catalogSubMenuButtonsTest(String buttonName, String link) {
@@ -106,39 +96,30 @@ public class BritishBakeryTest extends TestBase {
     }
 
     @Test
-    @Feature("British Bakery")
     @Story("Catalog tests")
-    @Owner("Olganow")
-    @Link(value = "Testing", url = "https://github.com/olganow")
     @Tag("actual")
     @DisplayName("Initial Basket State")
-    void initialBasketStatet() {
+    void initialBasketStateTest() {
         catalogPage.openPage();
         catalogPage.validateTitle();
         catalogPage.initialBasketState();
     }
 
     @Test
-    @Feature("British Bakery")
     @Story("Capcakes page tests")
-    @Owner("Olganow")
-    @Link(value = "Testing", url = "https://github.com/olganow")
-    @Tag("actual")
+    @Tag("regress")
     @DisplayName("Validate product Card")
-    void validateProductCart() {
+    void validateProductCartTest() {
         сupcakePage.openPage();
         сupcakePage.validateTitle();
         сupcakePage.validateProductCard();
     }
 
     @Test
-    @Feature("British Bakery")
     @Story("Basket tests")
-    @Owner("Olganow")
-    @Link(value = "Testing", url = "https://github.com/olganow")
-    @Tag("actual")
+    @Tag("regress")
     @DisplayName("Add product Card and clean basket")
-    void addProductToBasketAndCleanBasket() {
+    void addProductToBasketAndCleanBasketTest() {
         сupcakePage.openPage();
         сupcakePage.validateTitle();
         сupcakePage.clickAddProductToBasket();
