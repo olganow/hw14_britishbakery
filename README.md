@@ -37,9 +37,6 @@ gradle clean simple_test
 - [x] Allure отчет
   - Пример отчета:
 <img src="/readme_resourses/allure_report.png" width="960" height="445">
-  
-  - Пример видео о запуске:
-![test_video.mov](/readme_resourses/test_video.mov))
 
 - [x] Отчет о запуске в Telegram
   - Пример отчета:
